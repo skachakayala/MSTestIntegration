@@ -14,6 +14,7 @@ namespace AzureDemo
         {
             launchBrowser();
             Console.WriteLine("chrome browser lunched successfully");
+            Console.WriteLine("chrome browser lunched successfully");
 
         }
         public void launchBrowser()
