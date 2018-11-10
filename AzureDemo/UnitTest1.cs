@@ -19,7 +19,7 @@ namespace AzureDemo
         }
         public void launchBrowser()
         {
-            driver = new ChromeDriver(@"D:\selenium jars");
+            driver = new ChromeDriver(@"G:\selenium drivers\chromedriver_win32 (1)");
             //driver.Manage().Timeouts().ImplicitWait = 20;
             driver.Manage().Window.Maximize();
             driver.Url = "https://docs.microsoft.com/en-us/azure/devops/test/run-automated-tests-from-test-hub?view=vsts";

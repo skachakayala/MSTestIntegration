@@ -45,3 +45,19 @@ C:\Users\sukumar.kachakayala\source\repos\AzureDemo2\TestDemo\AzureDemo\obj\Debu
 C:\Users\sukumar.kachakayala\source\repos\AzureDemo2\TestDemo\AzureDemo\obj\Debug\AzureDemo.csproj.CopyComplete
 C:\Users\sukumar.kachakayala\source\repos\AzureDemo2\TestDemo\AzureDemo\obj\Debug\AzureDemo.dll
 C:\Users\sukumar.kachakayala\source\repos\AzureDemo2\TestDemo\AzureDemo\obj\Debug\AzureDemo.pdb
+G:\Visual studio\Sampletest\MSTestIntegration\AzureDemo\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+G:\Visual studio\Sampletest\MSTestIntegration\AzureDemo\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+G:\Visual studio\Sampletest\MSTestIntegration\AzureDemo\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+G:\Visual studio\Sampletest\MSTestIntegration\AzureDemo\bin\Debug\AzureDemo.dll
+G:\Visual studio\Sampletest\MSTestIntegration\AzureDemo\bin\Debug\AzureDemo.pdb
+G:\Visual studio\Sampletest\MSTestIntegration\AzureDemo\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+G:\Visual studio\Sampletest\MSTestIntegration\AzureDemo\bin\Debug\WebDriver.dll
+G:\Visual studio\Sampletest\MSTestIntegration\AzureDemo\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+G:\Visual studio\Sampletest\MSTestIntegration\AzureDemo\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+G:\Visual studio\Sampletest\MSTestIntegration\AzureDemo\bin\Debug\WebDriver.xml
+G:\Visual studio\Sampletest\MSTestIntegration\AzureDemo\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+G:\Visual studio\Sampletest\MSTestIntegration\AzureDemo\obj\Debug\AzureDemo.csprojAssemblyReference.cache
+G:\Visual studio\Sampletest\MSTestIntegration\AzureDemo\obj\Debug\AzureDemo.csproj.CoreCompileInputs.cache
+G:\Visual studio\Sampletest\MSTestIntegration\AzureDemo\obj\Debug\AzureDemo.csproj.CopyComplete
+G:\Visual studio\Sampletest\MSTestIntegration\AzureDemo\obj\Debug\AzureDemo.dll
+G:\Visual studio\Sampletest\MSTestIntegration\AzureDemo\obj\Debug\AzureDemo.pdb
