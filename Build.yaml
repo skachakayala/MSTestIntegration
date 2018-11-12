@@ -5,28 +5,28 @@ steps:
   displayName: Restore NuGet Packages
   inputs:
     command: restore
-    projects: src
+    projects: MSTestIntegration
 
 # Compile
 - task: DotNetCoreCLI@2
   displayName: Compile
   inputs:
     command: build
-    projects: src
+    projects: MSTestIntegration
 
 # Run unit tests
 - task: DotNetCoreCLI@2
   displayName: Run Unit Tests
   inputs:
     command: test
-    projects: src/BuildYaml.Tests
+    projects: MSTestIntegration/BuildYaml.Tests
 
 # Prepare publish files
 - task: DotNetCoreCLI@2
   displayName: Prepare Publish Files
   inputs:
     command: publish
-    projects: src/BuildYaml
+    projects: MSTestIntegration/BuildYaml
     arguments: --output $(Build.ArtifactStagingDirectory)
 
 # Publish the artifacts
