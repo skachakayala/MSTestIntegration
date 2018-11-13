@@ -4,13 +4,6 @@
 pool:
   vmImage: 'vs2017-win2016'
 - script: dotnet restore
-- task: DotNetCoreCLI@2
-  inputs:
-    command: restore
-    projects: '**/*.csproj'
-    feedsToUse: config
-    nugetConfigPath: NuGet.config    # Relative to root of the repository
-    externalFeedCredentials: <Name of the NuGet service connection>
 - script: dotnet build # Include additional options such as --configuration to meet your need
 - script: dotnet tool install -g dotnetsay
 - script: dotnetsay
