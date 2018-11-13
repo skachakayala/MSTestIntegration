@@ -1,45 +1,39 @@
-# Build ASP.NET Core project using Azure Pipelines
-# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core?view=vsts
 
-pool:
-  vmImage: 'vs2017-win2016'
-- script: dotnet restore
-- script: dotnet build # Include additional options such as --configuration to meet your need
-- script: dotnet tool install -g dotnetsay
-- script: dotnetsay
+steps:
+
+# Restore NuGet packages
 - task: DotNetCoreCLI@2
+  displayName: Restore NuGet Packages
+  inputs:
+    command: restore
+    projects: src
+
+# Compile
+- task: DotNetCoreCLI@2
+  displayName: Compile
+  inputs:
+    command: build
+    projects: src
+
+# Run unit tests
+- task: DotNetCoreCLI@2
+  displayName: Run Unit Tests
   inputs:
     command: test
-    projects: '**/*Tests/*.csproj'
-    arguments: '--configuration $(buildConfiguration)'
-- script: dotnet test <test-project> --logger trx
-- task: PublishTestResults@2
-  inputs:
-    testRunner: VSTest
-    testResultsFiles: '**/*.trx'
-- task: DotNetCoreCLI@2
-  inputs:
-    command: test
-    projects: '**/*Tests/*.csproj'
-    arguments: '--configuration $(buildConfiguration) --collect "Code coverage"'
-- script: dotnet test <test-project> --logger trx --collect "Code coverage"
-- task: PublishTestResults@2
-  inputs:
-    testRunner: VSTest
-    testResultsFiles: '**/*.trx'
-- task: PublishBuildArtifacts@1
-- script: dotnet pack /p:PackageVersion=$(version)  # define version variable elsewhere in your pipeline
+    projects: src/BuildYaml.Tests
 
-- task: NuGetCommand@2
-  inputs:
-    command: push
-    nuGetFeedType: external
-    publishFeedCredentials: '<Name of the NuGet service connection>'
-    versioningScheme: byEnvVar
-    versionEnvVar: version
+# Prepare publish files
 - task: DotNetCoreCLI@2
+  displayName: Prepare Publish Files
   inputs:
     command: publish
-    publishWebProjects: True
-    arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
-    zipAfterPublish: True
+    projects: src/BuildYaml
+    arguments: --output $(Build.ArtifactStagingDirectory)
+
+# Publish the artifacts
+- task: PublishBuildArtifacts@1
+  displayName: Publish Artifacts
+  inputs:
+    pathToPublish: $(Build.ArtifactStagingDirectory)
+    artifactName: deploy
+    artifactType: container
